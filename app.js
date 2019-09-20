@@ -34,13 +34,11 @@ app.post("/", function(req, res) {
 
   var jsonData = JSON.stringify(data);
 
-  var api_key = process.env.API_KEY;
-
   var options = {
     url: "https://us20.api.mailchimp.com/3.0/lists/97189cb54a",
     method: "POST",
     headers: {
-      "Authorization": api_key
+      "Authorization": process.env.API_KEY
     },
     body: jsonData
   };
