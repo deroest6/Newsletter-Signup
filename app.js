@@ -8,7 +8,9 @@ const app = express();
 
 //Allows the use of static folders
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/signup.html");
@@ -20,16 +22,14 @@ app.post("/", function(req, res) {
   var email = req.body.email;
 
   var data = {
-    members: [
-      {
-        email_address: email,
-        status: "subscribed",
-        merge_fields: {
-          FNAME: firstName,
-          LNAME: lastName
-        }
-        }
-    ]
+    members: [{
+      email_address: email,
+      status: "subscribed",
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName
+      }
+    }]
   };
 
   var jsonData = JSON.stringify(data);
