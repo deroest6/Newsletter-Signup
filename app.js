@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
-
+require('dotenv').config();
 const app = express();
 
 //Allows the use of static folders
