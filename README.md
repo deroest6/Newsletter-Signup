@@ -6,4 +6,5 @@ YOU! Yes You! Sign up for my newsletter that will send you absolutely nothing. I
 HTML, CSS, Bootstrap, Javascript, Node.js, MongoDB
 
 ### We want YOU! Sign Up
-(https://www.signmeup.herokuapp.com) - Sign Up Form
+(https://signmeup.herokuapp.com) - Sign Up Form
+
